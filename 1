@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int rec(int a)
+{
+	if (a > 0)
+	{
+		rec(a / 10);
+		cout << a % 10 << " ";
+	}
+	return 0;
+}
+
+int main()
+{
+	int a;
+	cin >> a;
+	rec(a);
+	return 0;
+}
