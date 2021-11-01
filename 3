@@ -1,17 +1,22 @@
 #include <iostream>
 using namespace std;
-int rec(int a, int b) 
+int rec(int a, int b)
 {
-	if ((a % b) == 0) {
-		cout << b << " ";
-		return rec((a / b), b);
+	if (a != 1) {
+		if ((a % b) == 0) {
+			cout << b << " ";
+			return rec((a / b), b);
+		}
+		else
+		{
+			return rec(a, (b + 1));
+		}
 	}
-	else 
-	{ 
-		return rec(a, (b + 1)); 
+	if (a == 1) {
+		cout << 1;
 	}
 }
-int rec1(int n) 
+int rec1(int n)
 {
 	rec(n, 2);
 	return 0;
